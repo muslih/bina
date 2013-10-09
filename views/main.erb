@@ -1,0 +1,42 @@
+
+<h2>Selamat datang <strong><%= @authen %></strong></h2>
+<div class="baris">
+	<div class="kiri">
+		<p>Total ada <strong><%= @binas.count %></strong> yang ditemukan </p>
+	</div>
+
+	<div class="kanan">
+		<% if @authen = "admin" %>
+			<%= erb :admin_export %>
+		<% end %> 
+		<%= erb :kembali %>
+	</div>
+</div>
+<table class="urut">
+	<thead>
+		<th data-sort="string">No Ujian</th>
+		<th data-sort="string">Nama</th>
+		<th data-sort="string">Pilihan 1</th>
+		<th data-sort="string">Fakultas 1</th>
+		<th data-sort="string">Pilihan 2</th>
+		<th data-sort="string">Fakultas 2</th>
+		<th data-sort="string">Nilai</th>
+		<th data-sort="string">Keterangan</th>
+	</thead>
+	<tbody>
+	<% @binas&&@binas.each do |bina| %>
+	<tr>
+		<td><%= bina.no_ujian %></td>
+		<td><%= bina.nama %></td>
+		<td><%= bina.pilihan_1 %></td>
+		<td><%= bina.fakultas_1 %></td>
+		<td><%= bina.pilihan_2 %></td>
+		<td><%= bina.fakultas_2 %></td>
+		<td><%= bina.nilai %></td>
+		<td><%= bina.keterangan %></td>
+	</tr>
+	<% end %>	
+	</tbody>
+</table>
+
+

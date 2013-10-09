@@ -1,0 +1,11 @@
+
+<p>
+	Selamat datang, <strong><%= @authen %></strong>
+</p>
+<form action="/data" method="post">
+	<label for="no">No Ujian</label>
+	<input type="text" id="no" name="noujian" placeholder="00-0-00000" required>
+	<button type="submit">Kirim</button>
+</form>
+
+<%= erb :tampil_filter %>

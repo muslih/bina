@@ -1,0 +1,13 @@
+source 'https://rubygems.org'
+
+gem 'sinatra'
+gem 'sqlite3'
+gem 'sass'
+gem 'sinatra-reloader' 
+gem 'dm-core'
+gem 'dm-sqlite-adapter'
+gem 'dm-migrations'
+gem 'dm-validations'
+gem 'dm-timestamps'
+gem 'pdfkit'
+gem 'wkhtmltopdf-binary'

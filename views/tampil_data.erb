@@ -1,0 +1,76 @@
+<h2>Tampiil detail data</h2>
+<div class="baris">
+	<div class="kiri">
+		<p>Selamat datang <%= @authen %></p>
+	</div>
+	<div class="kanan">
+		
+		<%= erb :kembali %>
+	</div>
+</div>
+<div class="detail">
+<table id="dvData" class="urut">
+	<tr>
+		<td>No Ujian</td>
+		<td><strong><%= @binas.no_ujian %></strong></td>
+	</tr>
+	<tr>
+		<td>Nama</td>
+		<td><strong><%= @binas.nama %></strong></td>
+	</tr>
+	<tr>
+		<td>Pilihan 1</td>
+		<td><strong><%= @binas.pilihan_1 %></strong></td>
+	</tr>
+	<tr>
+		<td>Fakultas 1</td>
+		<td><strong><%= @binas.fakultas_1 %></strong></td>
+	</tr>
+	<tr>
+		<td>Pilihan 2</td>
+		<td><strong><%= @binas.pilihan_2 %></strong></td>
+	</tr>
+	<tr>
+		<td>Fakultas 2</td>
+		<td><strong><%= @binas.fakultas_2 %></strong></td>
+	</tr>
+	<tr>
+		<td>Keterangan</td>
+		<td><strong><%= @binas.keterangan %></strong></td>
+	</tr>	
+	<tr>
+		<form method="POST" action="/data/<%= @binas.no_ujian %>" >
+		<td>Jalur</td>
+		<td>
+			<% if auth.credentials.first == "admin"  %>
+				<input type="text" name="jalur" value="TAHAP 1" >
+			<% else %>
+				<input type="text" name="jalur" value="BINA LINGKUNGAN" >
+			<% end %>
+		</td>
+	</tr>
+	<tr>
+		
+		<td>Pilihan</td>
+		<td>
+			<div class="baris">
+				<div style="float:left">
+					<input type="radio" name="keterangan" value="1"> <label for="keterangan">Pilihan 1</label>
+				</div>
+				
+				<div style="margin-left:30px; float:left">
+					<input type="radio" name="keterangan" value="2"><label for="keterangan">Pilihan 2</label>
+				</div>
+			</div>
+
+		</td>
+	</tr>
+	<tr class="kuning">
+		<td colspan ="2"><input type="submit" value="simpan"></td>
+
+	</tr>
+	</form>
+</table>
+
+
+

@@ -1,0 +1,27 @@
+<h2>Selamat datang  bos besar Fadloe robby</h2><%= auth.credentials.first %>
+
+<form action="/admin/cari" method="post">
+	<label for="no">No Ujian</label>
+	<input type="text" name="noujian" placeholder="00-0-00000" required >
+	<button type="submit">Kirim</button>
+</form>
+
+<div id="tampil_filter">
+	<a href="/admin/f1">Lihat daftar yang sudah dipilih</a>
+	<br>
+	<a href="/admin/f0">Lihat daftar yang belum dipilih</a>
+</div>
+
+<!-- <h3>Filter detail</h3>
+
+<form action="/detail" method="post">
+	<select>
+	  <option>Pilih Jurusan</option>
+	  <option>Fak. </option>
+	  <option value="sejarah">Pendidikan Sejarah</option>
+	  <option value="saab">Pancasila</option>
+	  <option value="opel">Ekonomi</option>
+	  <option value="audi">Matematika</option>
+	</select>
+	<button type="submit">Cari men!</button>
+</form> -->

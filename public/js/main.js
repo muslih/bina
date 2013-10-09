@@ -1,0 +1,1 @@
+$("table.urut").stupidtable();

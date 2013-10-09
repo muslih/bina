@@ -1,0 +1,53 @@
+<h2>Tampiil detail data</h2>
+
+<div class="baris">
+	<div class="kiri">
+		<p>
+			Selamat datang <strong><%= @authen %></strong>
+		</p>
+		
+	</div>
+	<div class="kanan">
+		<%= erb :kembali %>
+	</div>
+</div>
+
+<table>
+	<tr>
+		<td>No Ujian</td>
+		<td><%= @binas.no_ujian %></td>
+	</tr>
+	<tr>
+		<td>Nama</td>
+		<td><%= @binas.nama %></td>
+	</tr>
+	<tr>
+		<td>Pilihan 1</td>
+		<td><%= @binas.pilihan_1 %></td>
+	</tr>
+	<tr>
+		<td>Fakultas 1</td>
+		<td><%= @binas.fakultas_1 %></td>
+	</tr>
+	<tr>
+		<td>Pilihan 2</td>
+		<td><%= @binas.pilihan_2 %></td>
+	</tr>
+	<tr>
+		<td>Fakultas 2</td>
+		<td><%= @binas.fakultas_2 %></td>
+	</tr>
+	<tr>
+		<td>Nilai</td>
+		<td><%= @binas.nilai %></td>
+	</tr>
+	<tr class="kuning">
+		<td colspan="2">
+			<p>Maaf, anda tidak bisa memberikan pilihan, mahasiswa sudah di terima pada pilihan <strong><%= @binas.keterangan %> </strong> jurusan <strong><%= @jurusan %> </strong> fakultas <strong><%= @fakultas %></strong> pada <strong><%= @binas.jalur %></strong> </p>
+		</td>
+	</tr>
+</table>
+<!-- <p>Anda diterima di jurusan : <strong><%= @jurusan %> </strong> fakultas <strong><%= @fakultas %></strong></p> -->
+
+
+

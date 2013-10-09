@@ -1,0 +1,84 @@
+<h2>Tambah Data</h2>
+<form method="POST" action="/admin/tambah" >
+	<table>
+		<tr>
+			<td>No Ujian</td>
+			<td>
+				<input type="text" name="no_ujian" required>
+			</td>		
+		</tr>
+		<tr>
+			<td>
+				Nama	
+			</td>
+			<td>
+				<input type="text" name="nama" required>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Pilihan 1	
+			</td>
+			<td>
+				<input type="text" name="pilihan_1" required>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Fakultas 1	
+			</td>
+			<td>
+				<input type="text" name="fakultas_1" required>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Pilihan 1	
+			</td>
+			<td>
+				<input type="text" name="pilihan_2" required>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Fakultas 1	
+			</td>
+			<td>
+				<input type="text" name="fakultas_2" required>
+			</td>
+		</tr>
+		<tr>
+			<td>Keterangan</td>
+			<td>
+				<div class="baris">
+					<div style="float:left">
+						<input type="radio" name="keterangan" value="1"> <label for="keterangan">Pilihan 1</label>
+					</div>
+					
+					<div style="margin-left:30px; float:left">
+						<input type="radio" name="keterangan" value="2"><label for="keterangan">Pilihan 2</label>
+					</div>
+				</div>
+
+			</td>
+		</tr>
+		<tr>
+			<td>Jalur</td>
+			<td>
+				<div class="baris">
+					<div style="float:left">
+						<input type="radio" name="jalur" value="TAHAP 1"> <label for="keterangan">Tahat 1</label>
+					</div>
+					
+					<div style="margin-left:30px; float:left">
+						<input type="radio" name="jalur" value="BINA LINGKUNGAN"><label for="keterangan">Bina lingkungan</label>
+					</div>
+				</div>
+
+			</td>
+		</tr>
+		<tr>
+			<td colspan ="2"><input type="submit" value="simpan"></td>
+		</tr>
+	</table>
+</form>

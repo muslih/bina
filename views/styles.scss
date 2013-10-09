@@ -1,0 +1,203 @@
+$mainColor: #fdc438;
+$secColor: #353535;
+
+body{
+	font-family: arial, sans-serif;
+	background: #eee;
+	text-align: center;
+	color: $secColor;
+}
+
+h2{
+	text-transform: uppercase;
+}
+
+#bungkus{
+	background: #fff url('/img/bg.jpg') bottom left no-repeat;
+	width: 90%;
+	margin: 25px auto auto auto;
+	padding: 20px ;
+	border: solid 1px #444;
+}
+
+img{
+	&.logo{
+		width: 150px;
+	}
+}
+
+a{
+	&.tombol{
+		display: inline-block;
+		padding: 10px;
+		background: $mainColor;
+		color: #444;
+		&:hover{
+			cursor: pointer;
+			background: #444;
+			color: #fff;
+		}
+	}
+	color: darken($mainColor,10%);
+	text-decoration: none;
+	&:hover{
+		color: $secColor;
+	}
+}
+
+input{
+	color: #444;
+	outline: none;
+	border: solid 1px #eee;
+	padding: 5px;
+	&:focus{
+		border: solid 1px #444;
+	}
+}
+
+form{
+	margin: 15px 0px;
+
+	.baris{
+		margin-bottom: 5px;
+	}
+
+	label{
+		font-size: 15px;
+	}
+
+	button{
+		border: solid 1px #eee;
+		background: $mainColor;
+		padding: 5px;
+		color: #444;
+		&:hover{
+			background: #444;
+			color: #fff;
+		}
+	}
+}
+
+#tampil_filter{
+	padding: 15px 0px;
+	a{
+		font-size: 15px;
+		line-height: 25px;
+	}
+}
+
+#bungkustombol{
+	a{
+		&:after{
+			content: " | ";
+			color: #444;
+		}
+
+		&:last-child:after{
+			content: ""
+		}
+	}
+}
+
+.baris{
+	display: block;
+	overflow: hidden;
+	p{
+		margin: 0;
+	}
+}
+
+.kanan{
+	font-size: 13px;
+	float: right;
+}
+
+.kiri{
+	font-size: 13px;
+	float: left;
+	p{
+		margin-top: 15px;
+	}
+}
+
+table{
+	margin-top: 15px;
+	// display: block;
+	width: 100%;
+	font-size: 12px;
+	border: solid 1px #444;
+	border-collapse:collapse;
+	input[type="submit"]{
+		border: 1px solid #000; 
+		background: #444;
+		color: #fff;
+	}
+	&.normal{
+		width: auto;
+	}
+	thead{
+		tr{
+			background: $mainColor !important;
+		}
+		th{
+			font-weight: bold;
+			padding: 8.5px;
+			text-align: left;
+		}
+	}
+	td{
+		padding: 8.5px;
+		text-align: left;
+	}
+	tr{
+		background: rgba(255, 255, 255, 0.9);
+		&:nth-child(even){
+			background: rgba(238, 238, 238, 0.9);
+		}
+		&.kuning{
+			background: $mainColor
+		}
+	}
+}
+
+.pengumuman{
+	overflow: hidden;
+	h2{
+		margin-bottom: 20px;
+		span{
+			display: block;
+			font-size: 12px;
+			font-weight: normal;
+		}
+	}
+	
+	p{
+		text-align: justify;
+		font-size: 13px;
+		line-height: 22px;
+	}
+	ol{
+		@extend p;
+	}
+	ul{
+		@extend p;
+	}
+}
+
+.ttd{
+	float: right;
+	p{
+		// font-size: 14px;
+		text-align: center;
+		span{
+			display: block;
+		}
+	}
+}
+
+footer{
+	display: block;
+	clear: both;
+	margin-top: 30px;
+	font-size: 13px;
+}
